@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from bboard.views import index
+
 urlpatterns = [
+    url(r'^bboard/', index),
     url(r'^admin/', admin.site.urls),
 ]
