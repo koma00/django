@@ -3,6 +3,7 @@ from django.contrib import admin
 # Register your models here.
 
 from .models import Bb
+from .models import Rubric
 
 class BbAdmin(admin.ModelAdmin):
     list_display = ('title', 'content', 'price', 'published')
@@ -10,3 +11,4 @@ class BbAdmin(admin.ModelAdmin):
     search_fields = ('title', 'content', )
 
 admin.site.register(Bb, BbAdmin)
+admin.site.register(Rubric)
